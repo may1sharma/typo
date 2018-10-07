@@ -9,8 +9,13 @@ Feature: Create Category
     
   Scenario: Successfully write articles
     Given I am on the new categories page
-    When I fill in "category_name" with "test"
-    And I fill in "category_keywords" with "keys"
-    And I fill in "category_permalink" with "GG"
+    When I fill in "category_name" with "reptiles"
+    And I fill in "category_keywords" with "snake"
+    And I fill in "category_permalink" with "Not Available"
+    And I fill in "category_description" with "describe"
     Then I press "Save"
     Then I should see "Category was successfully saved."
+    Then I should see "reptiles"
+    Then I should see "snake"
+    Then I should see "Not Available"
+    Then I should see "describe"
